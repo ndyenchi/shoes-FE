@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {LeftMenuService} from "../../../service/left-menu.service";
+import {LeftMenu} from "../../../model/left-menu";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  menus: LeftMenu[] = [];
+  constructor(private leftMenuService: LeftMenuService) { }
 
   ngOnInit(): void {
-  }
+    setTimeout(()=>{
+      this.getListMenu();
+    },);
+    }
 
+  getListMenu(){
+    this.menus=this.leftMenuService.getList();
+  }
 }

@@ -9,6 +9,7 @@ import { HomeComponent } from './component/home/home/home.component';
 import { HeaderComponent } from './component/home/header/header.component';
 import { FooterComponent } from './component/home/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LeftMenuComponent } from './component/home/left-menu/left-menu.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignupComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LeftMenuComponent
   ],
   imports: [
     BrowserModule,
